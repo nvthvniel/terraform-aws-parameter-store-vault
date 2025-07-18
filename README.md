@@ -1,5 +1,5 @@
 # terraform-aws-parameter-store-vault
-Terraform module for building a Parameter Store secrets vault
+Terraform module for building a distributed Parameter Store secrets vault
 
 - [Blog Post](https://hello.nathanielstevens.app/posts/parameter_store_vault)
 
@@ -7,7 +7,7 @@ Terraform module for building a Parameter Store secrets vault
 
 ### Vault Account
 
-- Designed to be hosted in a dedicated 'vault' AWS account.
+- This Terraform Module is designed to be hosted in a dedicated 'vault' AWS account.
 - When a Parameter is created or modified, prefixed with `/vault/` path, an event bridge rule will trigger a Lambda function.
 - The Lambda function will clone or sync the secret with target sharing accounts defined using tags.
 
