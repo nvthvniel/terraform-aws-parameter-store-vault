@@ -11,7 +11,7 @@ Terraform module for building a distributed Parameter Store secrets vault
 - When a Parameter is created or modified, prefixed with `/vault/` path, an event bridge rule will trigger a Lambda function.
 - The Lambda function will clone or sync the secret with target sharing accounts defined using tags.
 
-```
+```terraform
 provider "aws" {
   region = "eu-west-2"
 }
